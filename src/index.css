@@ -93,6 +93,28 @@ body {
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
 }
 
+/* Tooltip "Dudu is going to cry..." – same style as UI */
+.valentine-tooltip {
+  /* position: absolute; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* bottom: 100%; */
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  font-family: "Fredoka One", cursive;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #be185d;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(190, 24, 93, 0.15);
+  border-radius: 9999px;
+  white-space: nowrap;
+  z-index: 10;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+  paint-order: stroke fill;
+}
+
 /* Success title – gradient */
 .text-valentine-title {
   background: linear-gradient(135deg, #be185d 0%, #e91e8c 50%, #ec4899 100%);

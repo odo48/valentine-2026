@@ -7,8 +7,7 @@ const SAD_IMAGE_DURATION_MS = 3000;
 // Bubu & Dudu GIF assets
 const IMG_ASK =
   "https://media.tenor.com/0cNM_9li440AAAAi/dudu-giving-flowers-bubu-flowers.gif";
-const IMG_NO_HOVER =
-  "https://media.tenor.com/0kUtrWrek8oAAAAj/bubu-dudu-angry-cute.gif";
+const IMG_NO_HOVER = "https://media.tenor.com/QOzMqPvW8PUAAAAi/love-you.gif";
 const IMG_CELEBRATION =
   "https://media.tenor.com/wcDQ5VaLa9MAAAAi/bubu-dudu.gif";
 
@@ -134,6 +133,15 @@ export default function App() {
                     transition={{ duration: 0.35, ease: "easeOut" }}
                   />
                 </div>
+                {isShowingSad && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="valentine-tooltip w-max m-auto"
+                  >
+                    Dudu is going to cry...
+                  </motion.p>
+                )}
 
                 <div className="relative flex flex-row items-center justify-center gap-6 sm:gap-8 min-h-[4rem]">
                   <motion.button
@@ -146,15 +154,6 @@ export default function App() {
                     Yes
                   </motion.button>
                   <div className="relative">
-                    {isShowingSad && (
-                      <motion.p
-                        initial={{ opacity: 0, y: 4 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 text-sm text-gray-700 font-sans font-medium whitespace-nowrap z-10"
-                      >
-                        Dudu is going to cry...
-                      </motion.p>
-                    )}
                     <motion.button
                       className="valentine-btn-no"
                       onClick={handleNoClick}
