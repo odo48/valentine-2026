@@ -88,7 +88,7 @@ export default function App() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <div className="valentine-card rounded-[2rem] p-8 md:p-10 text-center shadow-valentine border-2 border-white/60">
+          <div className="valentine-card w-full h-full md:w-1/2 md:h-1/2 rounded-[2rem] p-8 md:p-10 text-center shadow-valentine border-2 border-white/60">
             {yesPressed ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
